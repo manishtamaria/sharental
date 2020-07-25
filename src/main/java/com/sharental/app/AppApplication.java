@@ -1,5 +1,6 @@
 package com.sharental.app;
 
+import com.sharental.app.pojo.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
