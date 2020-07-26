@@ -36,5 +36,9 @@ public class User {
     private Set<Role> roles;
     @Column (name="registration_date")
     private LocalDateTime registrationDate;
+    @Column (name="phone")
+    @Length (min = 9, message = "*Your phone number must have at least 9 characters")
+    @NotEmpty(message = "*Please provide your phone number")
+    private String phone;
 
 }
