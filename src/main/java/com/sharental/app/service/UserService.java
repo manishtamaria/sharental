@@ -35,6 +35,8 @@ public class UserService {
         user.setActive(true);
         user.setRegistrationDate(LocalDateTime.now());
         user.setPhone(user.getPhone());
+//        if (user.getVerified())
+//            user.setVerified(true);
         Role userRole = roleRepository.findByRole(role);
         user.setRoles(new HashSet<>(Arrays.asList(userRole)));
         return userRepository.save(user);

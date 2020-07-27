@@ -40,5 +40,7 @@ public class User {
     @Length (min = 9, message = "*Your phone number must have at least 9 characters")
     @NotEmpty(message = "*Please provide your phone number")
     private String phone;
+    @Column (name="verified")
+    private Boolean verified=false;
 
 }
