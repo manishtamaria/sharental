@@ -40,12 +40,20 @@ public class AdminController {
         modelAndView.setViewName("admin-edit-user");
         return modelAndView;
     }
+
     @PostMapping("/admin/edit-user")
     public ModelAndView updateUser(User user){
         ModelAndView modelAndView = new ModelAndView();
         User updatedUser = userRepository.save(user);
         modelAndView.addObject("user",updatedUser);
         modelAndView.setViewName("admin-edit-user");
+        return modelAndView;
+    }
+
+    @GetMapping("/admin/all-admin")
+    public ModelAndView allAdmin(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("admin-all-admin");
         return modelAndView;
     }
 

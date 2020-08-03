@@ -12,6 +12,7 @@ import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 
 @Service
 @AllArgsConstructor
@@ -35,11 +36,23 @@ public class UserService {
         user.setActive(true);
         user.setRegistrationDate(LocalDateTime.now());
         user.setPhone(user.getPhone());
-//        if (user.getVerified())
-//            user.setVerified(true);
         Role userRole = roleRepository.findByRole(role);
         user.setRoles(new HashSet<>(Arrays.asList(userRole)));
         return userRepository.save(user);
     }
 
+    public void addAdmin(User admin) {
+        admin.setPassword(bCryptPasswordEncoder.encode(admin.getPassword()));
+        admin.setActive(true);
+        admin.setRegistrationDate(LocalDateTime.now());
+        admin.setPhone(admin.getPhone());
+        Role userRole = roleRepository.findByRole("ADMIN");
+        admin.setRoles(new HashSet<>(Arrays.asList(userRole)));
+        userRepository.save(admin);
+    }
+
+    public List<User> getAllAdmin() {
+        Role userRole = roleRepository.findByRole("ADMIN");
+        return userRepository.findAllByRoles(userRole);
+    }
 }

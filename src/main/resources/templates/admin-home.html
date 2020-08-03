@@ -4,26 +4,46 @@
     <meta charset="UTF-8">
     <title>Admin Home</title>
     <link type="text/css" rel="stylesheet" th:href="@{~/css/bootstrap.min.css}" />
+    <link type="text/css" rel="stylesheet" th:href="@{~/css/custom.css}" />
 </head>
 <body>
 <header>
     <!-- Just an image -->
-    <nav class="navbar navbar-light bg-primary">
+    <nav class="navbar navbar-light" style="padding-top:0;padding-bottom: 0 ">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img th:src="@{~/imgs/sharental-logo.png}" width="60" height="60" alt="" loading="lazy">
             </a>
         </div>
+
     </nav>
 </header>
-<div class="container">
-    <br/>
-    <br/>
-    <table class="table table-bordered">
-        <tr>
-            <td><a class="btn btn-link " th:href="@{/admin/all-users}">User List</a></td>
-        </tr>
-    </table>
+<div id="admin-home">
+    <div class="container" >
+        <br/>
+        <br/>
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <a href="/admin/all-users" class="card shadow text-decoration-none">
+                    <div class="card-body text-center">
+                        <img src="https://img.icons8.com/color/96/000000/group.png"/>
+                        <h4 class="text-primary text-decoration-none">Users</h4>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <a href="/admin/all-admin" class="card shadow text-decoration-none">
+                    <div class="card-body text-center">
+                        <img src="https://img.icons8.com/color/96/000000/add-user-group-woman-man.png"/>
+                        <h4 class="text-primary text-decoration-none">Admins</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
 </div>
+
 </body>
 </html>
