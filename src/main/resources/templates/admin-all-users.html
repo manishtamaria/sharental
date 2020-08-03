@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin | All Users</title>
+    <link type="text/css" rel="stylesheet" th:href="@{~/css/bootstrap.min.css}" />
+</head>
+<body>
+<header>
+    <!-- Just an image -->
+    <nav class="navbar navbar-light bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img th:src="@{~/imgs/sharental-logo.png}" width="60" height="60" alt="" loading="lazy">
+            </a>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <h2>All Users</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        <tr th:each="user: ${users}">
+            <td th:text="${user.id}" ></td>
+            <td th:text="${user.name}" ></td>
+            <td th:text="${user.active}"></td>
+            <th><a th:href="@{/admin/edit-user/{id}(id=${user.id})}" class="btn btn-primary">Edit Details</a></th>
+        </tr>
+
+    </table>
+</div>
+</body>
+</html>

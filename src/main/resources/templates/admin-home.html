@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Home</title>
+    <link type="text/css" rel="stylesheet" th:href="@{~/css/bootstrap.min.css}" />
+</head>
+<body>
+<header>
+    <!-- Just an image -->
+    <nav class="navbar navbar-light bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img th:src="@{~/imgs/sharental-logo.png}" width="60" height="60" alt="" loading="lazy">
+            </a>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <br/>
+    <br/>
+    <table class="table table-bordered">
+        <tr>
+            <td><a class="btn btn-link " th:href="@{/admin/all-users}">User List</a></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

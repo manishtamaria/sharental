@@ -4,6 +4,7 @@ import org.hibernate.validator.constraints.Length;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.persistence.*;
+import javax.validation.constraints.Pattern;
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -37,6 +38,7 @@ public class User {
     @Column (name="registration_date")
     private LocalDateTime registrationDate;
     @Column (name="phone")
+    @Pattern(regexp="(^$|[0-9]{9})")
     @Length (min = 9, message = "*Your phone number must have at least 9 characters")
     @NotEmpty(message = "*Please provide your phone number")
     private String phone;
