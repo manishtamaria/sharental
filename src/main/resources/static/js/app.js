@@ -15,4 +15,17 @@ app
             // called asynchronously if an error occurs
             // or server returns response with an error status.
         });
+        $scope.products=[];
+        $http({
+            method: 'GET',
+            url: "/api/user/"+1+"/products"
+        }).then(function successCallback(response) {
+            console.log(response);
+            $scope.products = response.data;
+            // this callback will be called asynchronously
+            // when the response is available
+        }, function errorCallback(response) {
+            // called asynchronously if an error occurs
+            // or server returns response with an error status.
+        });
     })
