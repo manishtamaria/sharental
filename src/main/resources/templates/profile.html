@@ -53,45 +53,17 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
+                    <tr ng-repeat="product in products">
                         <td>
                             <div class="product-item">
                                 <a class="product-thumb" href="#"><img src="https://via.placeholder.com/220x180/FF0000/000000" alt="Product"></a>
                                 <div class="product-info">
-                                    <h4 class="product-title"><a href="#">Unionbay Park</a></h4>
-                                    <div class="text-lg text-medium text-muted">$43.90</div>
+                                    <h4 class="product-title"><a href="#">{{product.productName}}</a></h4>
+                                    <div class="text-lg text-medium text-muted">{{product.productPrice}}</div>
                                     <div>Availability:
-                                        <div class="d-inline text-success">In Stock</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="text-center"><a class="remove-from-cart" href="#" data-toggle="tooltip" title="" data-original-title="Remove item"><i class="icon-cross"></i></a></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="product-item">
-                                <a class="product-thumb" href="#"><img src="https://via.placeholder.com/220x180/87CEFA/000000" alt="Product"></a>
-                                <div class="product-info">
-                                    <h4 class="product-title"><a href="#">Daily Fabric Cap</a></h4>
-                                    <div class="text-lg text-medium text-muted">$24.70</div>
-                                    <div>Availability:
-                                        <div class="d-inline text-warning">2 - 3 Weeks</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="text-center"><a class="remove-from-cart" href="#" data-toggle="tooltip" title="" data-original-title="Remove item"><i class="icon-cross"></i></a></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="product-item">
-                                <a class="product-thumb" href="#"><img src="https://via.placeholder.com/220x180/483D8B/000000" alt="Product"></a>
-                                <div class="product-info">
-                                    <h4 class="product-title"><a href="#">Cole Haan Crossbody</a></h4>
-                                    <div class="text-lg text-medium text-muted">$200.00</div>
-                                    <div>Availability:
-                                        <div class="d-inline text-success">In Stock</div>
+                                        <div class="d-inline text-success">{{product.availability}}</div>
+                                        <div class="d-inline text-success">{{product.productDescription}}</div>
+                                        <div class="d-inline text-success">{{product.createdAt}}</div>
                                     </div>
                                 </div>
                             </div>
