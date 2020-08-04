@@ -43,6 +43,6 @@ public class User {
     @NotEmpty(message = "*Please provide your phone number")
     private String phone;
     @Column (name="verified")
-    private Boolean verified=false;
+    private Boolean verified;
 
 }

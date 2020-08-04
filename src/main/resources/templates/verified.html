@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Verification</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container text-xs-center">
+    <div class="alert alert-success role=alert text-center" >
+            <br><br>
+            <h1 class="alert-heading" th:text="${message}"></h1>
+            <br><br>
+            <p class="lead">
+                <img  th:src="@{~/imgs/ver.png}"/></p>
+            <br><br>
+            <p class="lead">
+                <a href="" class="btn btn-success" th:href="@{~/login}" role="button"> Login to continue </a>
+            </p>
+            <br><br>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

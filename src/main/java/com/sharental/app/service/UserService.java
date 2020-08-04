@@ -13,6 +13,8 @@ import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
+
 
 @Service
 @AllArgsConstructor
@@ -55,4 +57,14 @@ public class UserService {
         Role userRole = roleRepository.findByRole("ADMIN");
         return userRepository.findAllByRoles(userRole);
     }
+
+    @Transactional
+    public boolean verifyUser(int userId){
+        //find user than set true than save user
+        User user = userRepository.findById(userId).get();
+        user.setVerified(true);
+        user =  userRepository.save(user);
+        return user.getVerified();
+    }
+
 }

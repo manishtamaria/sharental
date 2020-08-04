@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -63,4 +64,17 @@ public class AuthenticationController {
         modelAndView.setViewName("home");
         return modelAndView;
     }
+    @GetMapping("/authentication/user/verify/{id}")
+    public ModelAndView verification(@PathVariable Integer id){
+        ModelAndView modelAndView = new ModelAndView();
+        boolean verified = userService.verifyUser(id);
+        String message = "Not Verifed";
+        if(verified){
+            message = "Verified!";
+        }
+        modelAndView.setViewName("verified");
+        modelAndView.addObject("message",message);
+        return modelAndView;
+    }
+
 }
