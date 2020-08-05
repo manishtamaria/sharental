@@ -59,12 +59,16 @@
                                 <a class="product-thumb" href="#"><img src="https://via.placeholder.com/220x180/FF0000/000000" alt="Product"></a>
                                 <div class="product-info">
                                     <h4 class="product-title"><a href="#">{{product.productName}}</a></h4>
-                                    <div class="text-lg text-medium text-muted">{{product.productPrice}}</div>
+                                    <div>Price:
+                                        <div class="text-lg text-medium text-muted">{{product.productPrice}}</div></div>
                                     <div>Availability:
                                         <div class="d-inline text-success">{{product.availability}}</div>
-                                        <div class="d-inline text-success">{{product.productDescription}}</div>
-                                        <div class="d-inline text-success">{{product.createdAt}}</div>
                                     </div>
+                                    <div>Description:
+                                        <div class="d-inline text-success">{{product.productDescription}}</div></div>
+                                    <div>Added at:
+                                        <div class="d-inline text-success">{{product.createdAt}}</div></div>
+
                                 </div>
                             </div>
                         </td>
