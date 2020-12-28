@@ -1,0 +1,56 @@
+.why-use .media-body{
+    padding-left: 1rem;
+}
+
+section.final-call-to-action .signuphome, section.final-call-to-action .signuphome {
+    background-color: #53caa3;
+    border: 3px solid #53caa3;
+    padding: 10px 15px;
+    border-radius: 6px;
+    color: #fff;
+    margin: 10px 20px 0 11px;
+    float: right;
+    font-size: 20px;
+    font-family: SofiaPro, Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 400;
+    display: block;
+    height: auto;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+    width: auto !important;
+    text-align: center;
+}
+
+section.final-call-to-action .signuphome:hover, section.final-call-to-action .signuphome:hover {
+    background-color: #fcfcfc;
+    color: #53caa3;
+    border: 3px solid #53caa3;
+    transition: all .5s ease-in-out;
+    text-decoration: none;
+}
+
+#home-banner{
+    background: url("../imgs/background_home.jpg");
+    height: 920px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: fixed;
+    background-size: cover;
+}
+
+#home-search input{
+    display: inline-block;
+    padding: 18px 45px 18px 25px;
+    font-size: 16px;
+    text-indent: none;
+    width: 335px;
+    float: none;
+    border-style: none;
+    border: 2px solid #ffffff;
+    background: #ffffff;
+}
+.why-use {
+    color: #ffffff;
+}
