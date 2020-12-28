@@ -12,4 +12,5 @@ import java.util.List;
 public interface ProductRepository extends JpaRepository<Product, Integer> {
 
     List<Product> findByUser(User user);
+    List<Product> findTopByProductNameContaining(String query);
 }
