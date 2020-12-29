@@ -28,4 +28,8 @@ app
             // called asynchronously if an error occurs
             // or server returns response with an error status.
         });
-    })
+    }).controller('ProductController', function($scope,$http) {
+        console.log("Product controller loaded .... !! ")
+
+    //add here method to add product
+})
